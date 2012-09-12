@@ -17,6 +17,8 @@ namespace app
       if (first < 0 || second < 0) throw new ArgumentException();
 
       connection.Open();
+      IDbCommand dbCommand =  connection.CreateCommand();
+        dbCommand.ExecuteNonQuery();
 
       return first + second;
     }
