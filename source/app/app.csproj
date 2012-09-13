@@ -83,6 +83,7 @@
     <Compile Include="web\app\catalogbrowsing\DepartmentItem.cs" />
     <Compile Include="web\app\catalogbrowsing\IFindDepartments.cs" />
     <Compile Include="web\app\catalogbrowsing\stubs\StubDepartmentRepository.cs" />
+    <Compile Include="web\app\catalogbrowsing\ViewTheMainDepartmentsInTheDeparments.cs" />
     <Compile Include="web\app\catalogbrowsing\ViewTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\core\aspnet\CreatePage_Behaviour.cs" />
     <Compile Include="web\core\aspnet\GetTheCurrentContext_Behaviour.cs" />

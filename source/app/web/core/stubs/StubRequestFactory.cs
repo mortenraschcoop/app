@@ -11,6 +11,7 @@ namespace app.web.core.stubs
 
     class StubRequest : IEncapsulateRequestDetails
     {
+        public int department_id { get; set; }
     }
   }
 }

@@ -19,6 +19,10 @@
     <UpgradeBackupLocation />
     <TargetFrameworkProfile />
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,6 +57,7 @@
   <ItemGroup>
     <Compile Include="views\DepartmentBrowser.aspx.cs">
       <DependentUpon>DepartmentBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="views\ProductBrowser.aspx.cs">
       <DependentUpon>ProductBrowser.aspx</DependentUpon>
