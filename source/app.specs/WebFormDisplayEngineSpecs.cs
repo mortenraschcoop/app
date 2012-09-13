@@ -21,7 +21,7 @@ namespace app.specs
       Establish c = () =>
       {
         the_info = new Person();
-        web_form_view_factory = depends.on<IFindWebFormViews>();
+        web_form_view_factory = depends.on<ICreateWebFormViews>();
         view = fake.an<IHttpHandler>();
         the_current_context = ObjectFactory.web.create_http_context();
         depends.on<GetTheCurrentContext_Behaviour>(() => the_current_context);
@@ -40,7 +40,7 @@ namespace app.specs
         
 
       static Person the_info;
-      static IFindWebFormViews web_form_view_factory;
+      static ICreateWebFormViews web_form_view_factory;
       static IHttpHandler view;
       static HttpContext the_current_context;
     }

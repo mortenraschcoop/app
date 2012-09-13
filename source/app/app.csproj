@@ -84,9 +84,14 @@
     <Compile Include="web\app\catalogbrowsing\IFindDepartments.cs" />
     <Compile Include="web\app\catalogbrowsing\stubs\StubDepartmentRepository.cs" />
     <Compile Include="web\app\catalogbrowsing\ViewTheMainDepartmentsInTheStore.cs" />
+    <Compile Include="web\core\aspnet\CreatePage_Behaviour.cs" />
     <Compile Include="web\core\aspnet\GetTheCurrentContext_Behaviour.cs" />
+    <Compile Include="web\core\aspnet\IDisplayA.cs" />
     <Compile Include="web\core\aspnet\IFindPathsToWebForms.cs" />
-    <Compile Include="web\core\aspnet\IFindWebFormViews.cs" />
+    <Compile Include="web\core\aspnet\ICreateWebFormViews.cs" />
+    <Compile Include="web\core\aspnet\Report.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="web\core\aspnet\WebFormDisplayEngine.cs" />
     <Compile Include="web\core\aspnet\WebFormViewFactory.cs" />
     <Compile Include="web\core\BasicHandler.cs" />
@@ -99,11 +104,12 @@
     <Compile Include="web\core\IProcessARequest.cs" />
     <Compile Include="web\core\IProcessWebRequests.cs" />
     <Compile Include="web\core\IImplementAFeature.cs" />
+    <Compile Include="web\core\razor\RazorDisplayEngine.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
-    <Compile Include="web\core\stubs\StubDisplayEngine.cs" />
     <Compile Include="web\core\stubs\StubMissingCommand.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="web\core\stubs\StubWebFormPathRegistry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
