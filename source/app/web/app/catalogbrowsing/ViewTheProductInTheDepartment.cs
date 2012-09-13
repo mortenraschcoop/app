@@ -1,4 +1,6 @@
-﻿using app.web.core;
+﻿using app.web.app.catalogbrowsing.stubs;
+using app.web.core;
+using app.web.core.aspnet;
 
 namespace app.web.app.catalogbrowsing
 {
@@ -11,6 +13,12 @@ namespace app.web.app.catalogbrowsing
     {
       this.display_engine = display_engine;
       this.products = products;
+    }
+
+    public ViewTheProductInTheDepartment():this(new StubProductsRepository(),
+      new WebFormDisplayEngine())
+
+    {
     }
 
     public void process(IEncapsulateRequestDetails request)

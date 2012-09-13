@@ -9,7 +9,8 @@ namespace app.web.app.catalogbrowsing.stubs
     {
       return Enumerable.Range(1, 100).Select(x => new ProductItem
       {
-        
+        name = x.ToString("Product 0"),
+        price = 10m
       });
     }
   }

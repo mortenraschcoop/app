@@ -17,18 +17,20 @@ CodeFile="ProductBrowser.aspx.cs" MasterPageFile="App.master" %>
                         <th></th>
                     </tr>
                 </thead>
-                <%-- for each product--%>
+                <% foreach (var product in this.report_model)
+                   { %>
         <tr class="nonShadedRow">                    
             <td class="ListItem">                    
-                <a href='#'>Product Name</a>
+                <a href='#'><%= product.name %></a>
             </td>
             <td>Product Description</td>
             <td><input type="text" class="normalTextBox" value="1" /></td>
-            <td>10.00</td>               
+            <td><%= product.price.ToString("C") %></td>               
             <td><input type="checkbox" class="normalCheckBox" /></td>
             <td><input type="button" value="Add To cart"/></td>
 
         </tr>
+        <% } %>
     	</table>	
 								<table>
 									<tr>
