@@ -15,4 +15,13 @@ namespace app.web.app.catalogbrowsing.stubs
       return Enumerable.Range(1, 100).Select(x => new DepartmentItem {name = x.ToString("Sub Department 0")});
     }
   }
+
+
+  public class StubProductsRepository : IFindProducts
+  {
+      public IEnumerable<ProductItem> get_products(DepartmentItem map)
+      {
+          return Enumerable.Range(1, 100).Select(x => new ProductItem {});
+      }
+  }
 }

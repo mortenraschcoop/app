@@ -42,40 +42,4 @@ namespace app.specs
       static IEnumerable<DepartmentItem> the_main_departments;
     }
   }
-
-  [Subject(typeof(ViewTheProductInTheDepartment))]
-  public class ViewTheProductInTheDepartmentSpecs
-  {
-      public abstract class concern : Observes<IImplementAFeature,
-                                        ViewTheProductInTheDepartment>
-      {
-      }
-
-      public class when_run : concern
-      {
-          Establish c = () =>
-          {
-              department_repository = depends.on<IFindProducts>();
-              display_engine = depends.on<IDisplayInformation>();
-              request = fake.an<IEncapsulateRequestDetails>();
-              the_main_departments = new List<ProductItem> { new ProductItem() };
-
-              department_repository.setup(x => x.get_main_departments()).Return(the_main_departments);
-          };
-
-          Because b = () =>
-            sut.process(request);
-
-
-          It should_display_the_main_departments = () =>
-            display_engine.received(x => x.display(the_main_departments));
-
-
-
-          static IEncapsulateRequestDetails request;
-          static IFindProducts department_repository;
-          static IDisplayInformation display_engine;
-          static IEnumerable<ProductItem> the_main_departments;
-      }
-  }
 }
