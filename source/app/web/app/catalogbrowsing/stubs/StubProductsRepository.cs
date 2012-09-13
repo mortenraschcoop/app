@@ -3,11 +3,14 @@ using System.Linq;
 
 namespace app.web.app.catalogbrowsing.stubs
 {
-    public class StubProductsRepository : IFindProducts
+  public class StubProductsRepository : IFindProducts
+  {
+    public IEnumerable<ProductItem> get_products_in(CurrentDepartment map)
     {
-        public IEnumerable<ProductItem> get_products(DepartmentItem map)
-        {
-            return Enumerable.Range(1, 100).Select(x => new ProductItem {});
-        }
+      return Enumerable.Range(1, 100).Select(x => new ProductItem
+      {
+        
+      });
     }
+  }
 }

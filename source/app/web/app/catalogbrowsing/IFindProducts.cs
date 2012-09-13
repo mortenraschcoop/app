@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace app.web.app.catalogbrowsing
 {
-    public interface IFindProducts
-    {
-        IEnumerable<ProductItem> get_products(DepartmentItem map);
-    }
+  public interface IFindProducts
+  {
+    IEnumerable<ProductItem> get_products_in(CurrentDepartment department);
+  }
 }
