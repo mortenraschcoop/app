@@ -7,12 +7,12 @@ namespace app.web.app.catalogbrowsing.stubs
   {
     public IEnumerable<DepartmentItem> get_main_departments()
     {
-      return Enumerable.Range(1, 100).Select(x => new DepartmentItem{name = x.ToString("Department 0")});
+      return Enumerable.Range(1, 100).Select(x => new DepartmentItem {name = x.ToString("Department 0")});
     }
 
-      public IEnumerable<DepartmentItem> get_child_departments(int departmentId)
-      {
-          throw new System.NotImplementedException();
-      }
+    public IEnumerable<DepartmentItem> get_child_departments(CurrentDepartment departmentId)
+    {
+      return Enumerable.Range(1, 100).Select(x => new DepartmentItem {name = x.ToString("Sub Department 0")});
+    }
   }
 }

@@ -1,4 +1,6 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
+using app.web.app.catalogbrowsing;
 
 namespace app.web.core.stubs
 {
@@ -11,7 +13,13 @@ namespace app.web.core.stubs
 
     class StubRequest : IEncapsulateRequestDetails
     {
-        public int department_id { get; set; }
+      public int department_id { get; set; }
+
+      public InputModel map<InputModel>()
+      {
+        object item = new CurrentDepartment();
+        return (InputModel) item;
+      }
     }
   }
 }

@@ -2,6 +2,6 @@
 {
   public interface IEncapsulateRequestDetails
   {
-      int department_id { get; set; }
+    InputModel map<InputModel>();
   }
 }
